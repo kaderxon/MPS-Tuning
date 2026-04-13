@@ -27,7 +27,6 @@ Integrating our method into the CoOp framework is completely plug-and-play 🔌:
 3. 💻 **Import** our class in your `main` execution file: `MPSTuning` (or `MPSTuning_ClaudeRefined`).
 4. 🏃‍♂️ **Run** the training script exactly as you would train standard CoOp, just specifying the `MPSTuning` trainer and configs! 🎯
 
-```markdown
 ### 🔧 Dassl Dual-View Patch
 
 MPS-Tuning requires **two differently augmented views** of each input image (as described in the paper). The standard Dassl data loader does not support this out of the box for single-view datasets, so you need to apply the following patch to your Dassl installation. 🩹
