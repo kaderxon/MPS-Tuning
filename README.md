@@ -47,7 +47,7 @@ def build_data_loader(self):
     self.num_source_domains = dm.num_source_domains
     self.lab2cname = dm.lab2cname
     self.dm = dm
-​```
+```
 
 
 **Step 2: Update `DataManager` in `dassl.data.data_manager`** 📦
@@ -66,7 +66,7 @@ self.train_loader_x_2view = build_data_loader(
     is_train=True,
     dataset_wrapper=DatasetWrapper_2view  # ← uses the new wrapper below
 )
-​```
+```
 
 **Step 3: Add `DatasetWrapper_2view` to `dassl.data.data_manager`** 🖼️🖼️
 
@@ -112,7 +112,7 @@ class DatasetWrapper_2view(DatasetWrapper):
         if len(img) == 1:
             img = img[0]
         return img
-​```
+```
 
 After applying these three steps, your trainer will correctly generate two augmented views per sample for single-view datasets. 🎉 If you run into any issues, please don't hesitate to open an issue — we're happy to help! 🤝
 
